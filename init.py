@@ -20,11 +20,13 @@ def desenhaArvore(angulo, ramos, aux):
     else:
         imp.forward(tamanho * (0.8 ** angulo))
         imp.left(45 * (0.9 ** angulo))
-        desenhaArvore(angulo+1, ramos, 0)
+        desenhaArvore(angulo + 1, ramos, 0)
         imp.right(90 * (0.9 ** angulo))
-        desenhaArvore(angulo + 1, ramos , 1)
+        desenhaArvore(angulo + 1, ramos , 0)
         imp.left(45 * (0.9 ** angulo))
+        desenhaArvore(angulo + 1, ramos , 0)
         imp.back(tamanho * (0.8 ** angulo))
+        
         
 #chama a função que cria a arvore
 desenhaArvore(angulo, ramos, 0)
